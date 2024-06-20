@@ -35,7 +35,8 @@ class MangaController{
     async delete(req,res){
         try{
             const id=req.params.id;
-            await MangaRepository.getMangaByID(id);
+            const result=await MangaRepository.getMangaByID(id);
+            res.json(result)
         }catch(erro){
             console.error(erro)
         }
