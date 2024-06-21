@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos para ocultar a barra de rolagem horizontal */
+::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem do WebKit (Chrome, Safari, etc.) */
+  }
+  
+  /* Estilos adicionais para navegadores que não são WebKit, se necessário */
+  /* 
+     Para navegadores que não são WebKit (como Firefox), 
+     você pode usar @supports para aplicar estilos específicos apenas se a propriedade for suportada.
+  */
+  @supports (scrollbar-width: none) {
+    section::-webkit-scrollbar {
+      display: none;
+    }
+    section {
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+  body{
+    display: relative;
+  }
+  main{
+    display: inline-block;
+    scrollbar-width: 0px;
+  }

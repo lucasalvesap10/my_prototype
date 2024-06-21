@@ -1,7 +1,7 @@
 export default function User(){
     return (
-        <section>
-            <img src=""/>
+        <section className="abosulte right-0">
+            aaa
         </section>
     )
 }

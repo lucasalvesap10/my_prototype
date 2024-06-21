@@ -1,6 +1,6 @@
 import mariadb from 'mariadb'
-
-require("dotenv").config();
+import dotenv from 'dotenv'
+dotenv.config()
 
 const POOL=mariadb.createPool({
     user:process.env.DB_LOCAL_USER,
@@ -9,3 +9,5 @@ const POOL=mariadb.createPool({
     database:process.env.DB_LOCAL_NAME,
     password:process.env.DB_LOCAL_PASSWORD
 })
+
+export default POOL;

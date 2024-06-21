@@ -1,7 +1,7 @@
 import MangaController from './controllers/MangaController.js';
+import connectDB from './database/connectDB.js';
 import express from 'express';
 import cors from 'cors';
-import pool from './database/postgre.js';
 
 const app = express();
 
