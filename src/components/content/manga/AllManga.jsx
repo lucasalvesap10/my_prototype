@@ -3,7 +3,7 @@ import { useEffect,useState } from "react"
 export default function AllManga(){
     const [mangas,setMangas]=useState([]);
     useEffect(()=>{
-        fetch('/dataManga.json')
+        fetch('/json/dataManga.json')
             .then(response=>response.json())
             .then(data=>setMangas(data))
     },[]);
