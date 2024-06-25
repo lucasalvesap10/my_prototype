@@ -1,6 +1,4 @@
-import app from "./pages/api/app.js";
-
-//require("dotenv").config();
+import app from "./pages/API/app.js";
 
 const PORT=3001;
 
