@@ -1,6 +1,6 @@
-import app from "./pages/API/app.js";
+import app from "./pages/api/app.js";
 
-const PORT=3001;
+const PORT=process.env.PORT || 3001;
 
 app.listen(PORT,()=>{
     console.log(`Serven on! http://localhost:${PORT}`)
