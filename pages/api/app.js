@@ -5,7 +5,7 @@ const app=express();
 app.use(express.json());
 app.use(cors())
 
-app.get("/helloworld",(req,res)=>{
+app.get("/api/helloworld",(req,res)=>{
     res.json({
         "Hello":"World"
     })
