@@ -2,10 +2,6 @@
     "version": 2,
     "builds":[
         {
-            "src":"tailwindcss.config.js"
-            
-        },{"src":"postcss.config.js"},
-        {
             "src":"server.js",
             "use":"@vercel/node"
         },{
