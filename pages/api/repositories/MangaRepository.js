@@ -1,19 +1,30 @@
-import POOL from "../database/mariaDB.js";
+import connectDB from "../database/connectDB.js";
+
 class MangaRepository{
     async getAllManga(){
-        let conn;
-        try{
-            conn=await POOL.getConnection();
-            const sql='SELECT * FROM manga';
-            return await conn.query(sql);
-            
-        }catch(erro){
-            console.error(erro);
-        }
+        const sql='SELECT * FROM mangas;';
+        return await connectDB(sql);
     }
+
     async getMangaByID(id){
-        const exemp={"nome":"manga"}
-        return exemp;
+        const sql = 'SELECT * FROM mangas WHERE id=?;'
+        const result = await connectDB(sql,[id]);
+        return result;
+    }
+    async addManga(dataManga){
+        const sql = 'INSERT INTO mangas(nome) VALUES(?);;'
+        const result = await connectDB(sql,[dataManga.nome]);
+        return result;
+    }
+    async updateManga(id,dataManga){
+        const sql = 'UPDATE mangas SET nome=? WHERE id=?;'
+        const result = await connectDB(sql,[dataManga.nome,id]);
+        return result;
+    }
+    async deleteManga(id){
+        const sql = 'DELETE FROM mangas WHERE id=?;'
+        const result = await connectDB(sql,id);
+        return result;
     }
 }
 

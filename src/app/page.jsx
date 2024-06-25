@@ -9,6 +9,22 @@ export default function Home(){
                 <h3>Todos os Mangas</h3>
                 <AllManga/>
             </section>
+            <section>
+                <h3>Todos os Mangas</h3>
+                <AllManga/>
+            </section>
+            <section>
+                <h3>Todos os Mangas</h3>
+                <AllManga/>
+            </section>
+            <section>
+                <h3>Todos os Mangas</h3>
+                <AllManga/>
+            </section>
+            <section>
+                <h3>Todos os Mangas</h3>
+                <AllManga/>
+            </section>
         </main>
     )
 }

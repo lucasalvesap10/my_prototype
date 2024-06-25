@@ -1,4 +1,3 @@
-import client from "./pages/api/database/postgre.js";
 import app from "./pages/api/app.js";
 
 //require("dotenv").config();

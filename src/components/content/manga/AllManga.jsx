@@ -8,7 +8,7 @@ export default function AllManga(){
             .then(data=>setMangas(data))
     },[]);
     return(
-        <section className='my-2 mx-2 max-w-screen-xl overflow-x-auto'>
+        <section className='my-2 mx-2 max-w-screen-xl overflow-x-auto overflow-x'>
             <ul className='flex'>
             {/* Exemplo de itens */}
             {mangas.map(manga=>(

@@ -3,9 +3,11 @@ import MangaRepository from "../repositories/MangaRepository.js";
 class MangaController{
     async index(req,res){
         try{
-            res.json(await MangaRepository.getAllManga());
+            const result=await MangaRepository.getAllManga();
+            res.json(result);
         }catch(erro){
-            console.error(erro)
+            console.error('Erro fetching Manga:',erro)
+            res.status(500).send('Internal Server Error')
         }
     }
     async show(req,res){
@@ -18,16 +20,17 @@ class MangaController{
     }
     async store(req,res){
         try{
-            const id=req.params.id;
-            await MangaRepository.getMangaByID(id);
+            const dataManga=req.body;
+            await MangaRepository.addManga(dataManga);
         }catch(erro){
             console.error(erro)
         }
     }
     async update(req,res){
         try{
+            const dataManga=req.body;
             const id=req.params.id;
-            await MangaRepository.getMangaByID(id);
+            await MangaRepository.update(id,dataManga);
         }catch(erro){
             console.error(erro)
         }
@@ -35,7 +38,7 @@ class MangaController{
     async delete(req,res){
         try{
             const id=req.params.id;
-            const result=await MangaRepository.getMangaByID(id);
+            const result=await MangaRepository.deleteManga(id);
             res.json(result)
         }catch(erro){
             console.error(erro)
