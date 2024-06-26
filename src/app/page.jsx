@@ -1,5 +1,4 @@
-'use client'
-import './globals.css'
+"use client"
 export default function Home(){
     return(
         <main>
