@@ -2,8 +2,7 @@
     "version": 2,
     "builds":[
         {
-            "src":"tailwind.config.js",
-            "use":"npx tailwindcss init -p"
+            "use":"tailwindcss init -p"
         },
         {
             "src":"server.js",
