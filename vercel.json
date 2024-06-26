@@ -3,11 +3,7 @@
     "builds":[
         {
             "src":"tailwind.config.js",
-            "use":"tailwind"
-        },
-        {
-            "src":"postcss.config.js",
-            "use":"postcss"
+            "use":"npx tailwindcss init -p"
         },
         {
             "src":"server.js",
