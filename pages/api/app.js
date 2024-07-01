@@ -1,3 +1,4 @@
+import MangaController from './controllers/MangaController.js';
 import express from 'express';
 import cors from 'cors';
 const app=express();
@@ -10,5 +11,7 @@ app.get("/api/helloworld",(req,res)=>{
         "Hello":"World"
     })
 })
+
+app.get("/api/manga/showAll",(req,res)=>MangaController.index(req,res));
 
 export default app;
