@@ -19,7 +19,8 @@ const pool=mariadb.createPool({
     port: process.env.MARIADB_PORT,
     database: process.env.MARIADB_NAME,
     password: process.env.MARIADB_PASS,
-    connectionString: process.env.POSTGRES_URL
+    connectionString: process.env.POSTGRES_URL,
+    ssl: process.env.POSTGRES_URL_NO_SSL
 })
 class connectDB{
     async connectMaria(typeSql){
