@@ -13,8 +13,12 @@
             "use":"postcss"
         },
         {
-            "src":"tailwind.config.js",
+            "src":"postcss.config.js",
             "use":"tailwind"
+        },
+        {
+            "src":"postcss.config.js",
+            "use":"autoprefixer"
         }
     ],
     "routes":[
