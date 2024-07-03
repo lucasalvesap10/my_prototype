@@ -10,7 +10,11 @@
         },
         {
             "src":"postcss.config.js",
-            "use":"@vercel/postcss"
+            "use":"postcss"
+        },
+        {
+            "src":"tailwind.config.js",
+            "use":"tailwind"
         }
     ],
     "routes":[
